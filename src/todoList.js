@@ -1,16 +1,15 @@
 import { useState } from "react";
 
 
-const TodoList = () => {
-    const [todoList,SetTodoList] = useState(["First item","First item","First item","First item"])
+const TodoList = ({listData}) => {
     // const [nb,SetNB] = useState(1)
     return (
       <div>
           <ul>
               {/* <li>{nb}</li> */}
-              {todoList.map(
+              {listData.map(
                 item=>
-                <li>{item}</li>
+                <li key={item}>{item}</li>
                 )}
           </ul>
       </div>
