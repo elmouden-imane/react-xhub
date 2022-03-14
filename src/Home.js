@@ -1,18 +1,30 @@
-const Home = () => {
+import { useState } from "react";
+import Addcmp from "./addComponent";
+import TodoList from "./todoList";
 
-    let name='mario';
-    const handleClickAgain = (a) =>{
-        console.log("hello" + a);
-    }
+const Home = () => {
+  const [inputValue,setInputItem] = useState('hana')
+  const [todoList,SetTodoList] = useState(["First item","First item","First item","First item"])
+  
+  const handleChange = (value)=>{
+    setInputItem(value)
+    console.log(inputValue)
+  }
+
+  const handleAdd = ()=>{
+    const tempList = [...todoList]
+    tempList.push(inputValue)
+    console.log(tempList)
+
+    SetTodoList(tempList)
+  }
+
     return (
       <div className="home">
-        <h2>Homepage</h2>
-
-        <p> {name} </p>
-        <button onClick={() => handleClickAgain('mario')}>Click me again</button>
-
+        <h2>Todo List</h2>
+        <TodoList listData={todoList}/>
+        <Addcmp value={inputValue} handleChange={handleChange} handleAdd={handleAdd}/>
       </div>
-
     );
   }
    
