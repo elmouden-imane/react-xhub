@@ -2,7 +2,7 @@
 
 /* base styles */
 * {
-  margin: 0;
+  margin: 10;
   font-family: "Quicksand";
   color: #333;
 }
@@ -32,4 +32,19 @@
   max-width: 600px;
   margin: 40px auto;
   padding: 20px;
+}
+.btn{
+  margin: 10px;
+}
+.delete{
+  background-color: rgb(247, 161, 161);
+  border-radius: 15px ;
+  border: 0px;
+  color: #333;
+  width: 0px;
+  height:50px;
+}
+
+.delete:hover{
+  background-color:red
 }

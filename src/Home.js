@@ -40,23 +40,33 @@ const Home = () => {
 //
 
 const handleCheckbox = id => {
-  const tempState = [...TodoList]
+  const tempState = [...todoList] //copie
   tempState.map(item=>{
     if (item.id===id){
       item.value =! item.value
-    }
+    }  
   })
  SetTodoList(tempState)
 };
 const handleClick = () => {
-  this.setState(prevState => {
-    return {
-      todoList: prevState.todoList.filter(li => !li.value)
-    };
-  });
+  const tempState = [...todoList] //copie
+  // const arr=[]
+  // tempState.map(item=>{
+  //   if (item.value===false){
+  //    arr.push(item)    }
+  
+  // })
+  // SetTodoList(arr)
+
+
+ SetTodoList(tempState.filter( function(e) { return e.value === false}  ))
+//   //SetTodoList(tempState.filter(e=> e.value === false))
+  
 };
 
-  
+
+
+
 
 
   
@@ -67,6 +77,7 @@ const handleClick = () => {
         <TodoList listData={todoList} handleCheckbox={handleCheckbox}/>
         <Addcmp value={inputValue} handleChange={handleChange}  handleAdd={handleAdd}/>
         <Delete handleClick={handleClick} /> 
+
       </div>
     );
   }
