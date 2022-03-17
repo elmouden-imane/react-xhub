@@ -1,6 +1,5 @@
 import { useState } from "react";
-import Update from "./updateComponent";
-import image from "./748851.png";
+import image from "../img.png";
 
 const TodoList = ({ listData, handleCheckbox,handleUpdate}) => {
   // const [nb,SetNB] = useState(1)
