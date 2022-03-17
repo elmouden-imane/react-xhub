@@ -7,29 +7,137 @@
   color: #333;
 }
 .navbar {
-  padding: 20px;
+  /* height: 100px; */
+  padding: 17px;
   display: flex;
   align-items: center;
-  max-width: 600px;
-  margin: 0 auto;
+  width: 100%;
+  margin: 0px auto;
   border-bottom: 1px solid #f2f2f2;
+  justify-content: center; 
+  background-color: blueviolet;
 }
 .navbar h1 {
-  color: #f1356d;
+  color: white;
+
 }
-.navbar .links {
-  margin-left: auto;
-}
-.navbar a {
-  margin-left: 16px;
-  text-decoration: none;
-  padding: 6px;
-}
-.navbar a:hover {
-  color: #f1356d;
-}
+
 .content {
-  max-width: 600px;
+  display: flex;
+  width: 100%;
   margin: 40px auto;
   padding: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.btn{
+  margin: 10px;
+}
+.update{
+  display: flex;
+  width: 20px;
+  height: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  
+}
+
+.update img {
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+
+.delete{
+  width: 70px;
+  height: 35px;
+  border-radius: 5px;
+  border: 1.5px solid #80808012;
+  justify-content: center;
+  background-color: blueviolet;
+  color: white;
+  font-weight: bold;
+  margin-left: 600px;
+}
+
+.delete:hover{
+  background-color:red
+}
+
+.Addcmp {
+  display: flex;
+  width: 600px;
+  height: 117px;
+  padding: 17px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 5px 5px 5px rgb(0 0 0 / 15%);
+}
+
+.Addcmp input {
+  width: 90%;
+  height: 45px;
+  border-radius: 5px;
+  border: 1.5px solid #80808012;
+  padding-left: 10px;
+}
+
+.add {
+  width: 70px;
+  height: 35px;
+  border-radius: 5px;
+  border: 1.5px solid #80808012;
+  justify-content: center;
+  background-color: blueviolet;
+  color: white;
+  font-weight: bold;}
+
+.container{
+  margin-top: 70px ;
+  padding: 10px;
+  width: 100%;
+}
+
+.container ul {
+  list-style: none;
+}
+
+.container li {
+  display: flex;
+  align-items: center;
+}
+input[type="checkbox"]{
+  justify-content: right;
+  width: 20px;
+  height: 20px;
+  
+}
+
+input[type="checkbox"]:checked::after{
+  background-color: red;
+}
+
+
+.home{
+  
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-content: center;
+  align-items: center;
+}
+
+.block{
+  width: 600px;
+  height:45px ;
+  border: none;
+
+}
+.block:focus{
+  border: 1px solid gray;
+
+ 
 }
